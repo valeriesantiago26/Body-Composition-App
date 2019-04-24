@@ -1,0 +1,28 @@
+.container{
+	/*margin: 5%;*/
+	margin: 0 auto;
+}
+
+.start-button a {
+		width: 25%;
+}
+
+.home-buttons a {
+		width: 100%;
+}
+
+.next-btn {
+		width: 30%;
+		margin: 0 auto;
+}
+
+.panel-container{
+	width: 50%;
+	margin: 0 auto;
+
+}
+
+.dob-widget{
+	display: inline-flex;
+	width: 60%;
+}

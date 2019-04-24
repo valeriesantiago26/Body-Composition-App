@@ -1,0 +1,70 @@
+ {% extends "base.html" %}
+
+{% block content %}
+
+<div class="panel-container">
+	<h1 class="text-center p-3">Physical Measurements</h1>
+
+	<form>
+	  <fieldset>
+	      <div class="text-center">
+    	      <div class="col-4 btn-group btn-group-toggle" data-toggle="buttons">
+              	  <label class="btn btn-primary">
+                  <input type="radio" name="options" ng-model="unit" value="0" id="metric" autocomplete="off" checked=""> Metric
+                  </label>
+                  <label class="btn btn-primary">
+                  <input type="radio" name="options" ng-model="unit" value="1" id="imperial" autocomplete="off"> Imperial
+                  </label>  
+              </div>
+	      </div>
+	    <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Weight</label>
+	      <div class="input-group" ng-show="unit == '0'">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">kg</span>
+              </div>
+	      </div>
+  	      <div class="input-group" ng-show="unit == '1'">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">Lbs.</span>
+              </div>
+	      </div>
+        </div>
+        
+	    <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Height</label>
+	      <div class="input-group" ng-show="unit == '0'">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">cm.</span>
+              </div>
+	      </div>
+	      <div class="row" ng-show="unit == '1'">
+	          <div class="input-group col-6">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">ft.</span>
+              </div>
+    	      </div>
+    	      <div class="input-group col-6">
+    	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+        	      <div class="input-group-append">
+                        <span class="input-group-text">in.</span>
+                  </div>
+    	      </div>
+	      </div>
+        </div>
+        <div class="text-center">
+	        <button type="button" class="btn btn-success" ng-show="method == 'bmi'">Calculate my BMI</button>
+        </div>
+        <div class="text-center">
+          <button type="button" class="btn btn-success" ng-show="method != 'bmi'">Skinfold Measurements</button>
+        </div>
+	    </fieldset>
+	</form>
+
+</div>
+
+{% endblock %}

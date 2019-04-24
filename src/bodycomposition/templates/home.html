@@ -1,0 +1,31 @@
+ {% extends "base.html" %}
+
+{% block content %}
+
+<div>
+	<h1 class="text-center p-3">Body Composition Calculator</h1>
+	<h5 class="text-center">Welcome <i class="fas fa-child"></i></h5>
+	<div class="row justify-content-md-center">
+		<div class="col col-lg-8"> 
+			<p class="text-center p-3">Here you can calculate your body mass index and your body composition. This includes fat percentage, body fat mass, body lean mass and calorie requiremenyt (BMR).</p>
+		</div>
+	</div>
+
+	<div>
+		<p class="text-center p-3">Select the body composition measure to calculate.</p>
+		<div class="row home-buttons">
+			<div class="col col-lg-4 text-center">
+				<a class="btn btn-outline-success btn-lg" href="" role="button" ng-click="bmi()">Body Mass Index (BMI)</a>
+			</div>
+			<div class="col-sm text-center">
+				<a class="btn btn-outline-success btn-lg" href="" role="button" ng-click="fold3()">Body Composition- Jackson-Pollack 3-fold</a>
+			</div>
+			<div class="col-sm text-center">
+				<a class="btn btn-outline-success btn-lg" href="" role="button" ng-click="fold7()">Body Composition- Jackson-Pollack 7-fold</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+{% endblock %}

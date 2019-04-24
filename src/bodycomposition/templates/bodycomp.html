@@ -1,0 +1,168 @@
+ {% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="panel-container">
+	<h1 class="text-center p-3">Skinfold Measurements</h1>
+
+	<!-- Form for males, calculate using 3 fold -->
+	<form ng-show="gender == 'male' && method == '3'">
+	  <fieldset>
+	    <h4 class="text-center p-3">Jackson-Pollack 3-fold Method</h4>
+	    <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Chest</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Abdomen</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Thigh</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        <div class="text-center">
+	        <button type="button" class="btn btn-success">Calculate my BMI</button>
+        </div>
+	    </fieldset>
+	</form>
+	
+	<!-- Form for females, calculate using 3 fold -->
+	<form ng-show="gender == 'female' && method == '3'">
+	  <fieldset>
+	    <h4 class="text-center p-3">Jackson-Pollack 3-fold Method</h4>
+	    <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Triceps</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Thigh</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Suprailiac</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        <div class="text-center">
+	        <button type="button" class="btn btn-success">Calculate my BMI</button>
+        </div>
+	    </fieldset>
+	</form>
+	
+	<!-- Form for everybody, calculate using 7 fold -->
+	<form ng-show="method == '7'">
+	  <fieldset>
+	    <h4 class="text-center p-3">Jackson-Pollack 7-fold Method</h4>
+	    <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Chest</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Axilla</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Tricep</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Subscapular</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Abdominal</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Suprailiac</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="form-group">
+	      <label class="col-form-label" for="userWeight">Thigh</label>
+	      <div class="input-group">
+	          <input type="text" class="form-control" placeholder="100" id="inputDefault">
+    	      <div class="input-group-append">
+                    <span class="input-group-text">mm</span>
+              </div>
+	      </div>
+        </div>
+        
+        <div class="text-center">
+	        <button type="button" class="btn btn-success">Calculate my BMI</button>
+        </div>
+	    </fieldset>
+	</form>
+
+</div>
+{% endblock %}
